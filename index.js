@@ -2,11 +2,11 @@
 // 1) -------------------------------------------------------
 let numbers = [0,1,2,3,4,5,6,7,8,9]
 
-for (let i = 0; i < numbers.length; i++) {
-    console.log(numbers[i])
-}
+// for (let i = 0; i < numbers.length; i++) {
+//     console.log(numbers[i])
+// }
 // Q: What is the time complexity of the for loop?
-// ANSWER:
+// ANSWER: O(n)
 
 
 // 1.2) You are challenged to find the 4th element of the array, and you came up with this solution:
@@ -14,20 +14,20 @@ for (let i = 0; i < numbers.length; i++) {
 var count = 1
 var answer = 0
 
-for (let i = 0; i < numbers.length; i++) {
-    if (count === 4) {
-        answer = numbers[i]
-        return
-    } else {
-        count += 1
-    }
-}
+// for (let i = 0; i < numbers.length; i++) {
+//     if (count === 4) {
+//         answer = numbers[i]
+//         return
+//     } else {
+//         count += 1
+//     }
+// }
 // Q: What is the time complexity of of this solution?
-// ANSWER:
+// ANSWER: O(1)
 
 
 // Q: Could you come up with a solution that has a better time complexity? If so, what is that time complexity?
-// ANSWER:
+// ANSWER: No, I can't. This is the best tiem complexity.
 
 
 // 2) -------------------------------------------------------
@@ -37,7 +37,7 @@ function printA() {
     }
 }
 // Q: What is the time complexity of the function?
-// ANSWER:
+// ANSWER:O(1)
 
 
 // 3) -------------------------------------------------------
@@ -47,7 +47,7 @@ function printB(number) {
   }
 }
 // Q: What is the time complexity of the function?
-// ANSWER:
+// ANSWER: O(n)
 
 
 // 4) -------------------------------------------------------
@@ -59,7 +59,7 @@ function printC(num, arr) {
   }
 }
 // Q: What is the time complexity of the function?
-// ANSWER:
+// ANSWER:O(n^2)
 
 
 // 5) -------------------------------------------------------
@@ -69,7 +69,7 @@ for (let i = 0; i < numbers.length; i++) {
   }
 }
 // Q: What is the time complexity of the nested for loop?
-// ANSWER:
+// ANSWER:O(n^2)
 
 
 // 6) -------------------------------------------------------
@@ -77,7 +77,7 @@ let newNumbersA = numbers.filter((num) => {
   return num < 5
 })
 // Q: What is the time complexity of the filter higher-order function?
-// ANSWER:
+// ANSWER:O(1)
 
 
 // 7) -------------------------------------------------------
@@ -85,7 +85,7 @@ let newNumbersB = numbers.map((num) => {
   return num * 3
 })
 // Q: What is the time complexity of the map higher-order function?
-// ANSWER:
+// ANSWER:O(n)
 
 
 // 8) -------------------------------------------------------
@@ -93,7 +93,7 @@ function removeNum() {
     numbers.splice(3,1)
 }
 // Q: What is the time complexity of the function?
-// ANSWER:
+// ANSWER:O(1)
 
 
 // 9) -------------------------------------------------------
@@ -101,7 +101,7 @@ function insertNum() {
     numbers.splice(3, 0, 19)
 }
 // Q: What is the time complexity of the function?
-// ANSWER:
+// ANSWER:O(1)
 
 
 // 10) -------------------------------------------------------
@@ -109,7 +109,7 @@ function pushNum() {
     numbers.push(25)
 }
 // Q: What is the time complexity of the function?
-// ANSWER:
+// ANSWER:O(1)
 
 
 // 11) -------------------------------------------------------
@@ -120,7 +120,7 @@ function printFirstTwoNames(array) {
 }
 
 // Q: What is the time complexity of the function? Could we write this function differently to accomplish the goal of the function in a faster time complexity?
-// ANSWER:
+// ANSWER:O(1), I don't think this could be faster.
 
 
 // Advanced Challenges
@@ -134,8 +134,17 @@ function printFirstTwoNames(array) {
 
 
 // Starting Code:
-function squareEveryDigit(number) {
-    
-}
+function squareEveryDigit(num){
+    num = String(num)
+    let catNum = []
+    let ansArr = num.split('')
+    for (let i = 0; i < num.length; i++){
+         catNum.push(String(Number(ansArr[i]) ** 2))
+         
+    }
+    return console.log(Number(catNum.join('')))
+  }
+
+// console.log('Please work')
 
 squareEveryDigit(946) // When running 946, you should see a result of 811636
